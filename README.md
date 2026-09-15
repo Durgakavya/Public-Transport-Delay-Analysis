@@ -244,7 +244,7 @@ Public-Transport-Delay-Analysis/
 
 &#x20;   ├── 01\_database\_tables.png
 
-&#x20;   ├── 02\_passenger\_demand.png
+&#x20;   ├── 02\_trip\_data.png
 
 &#x20;   ├── 03\_delay\_analysis.png
 
