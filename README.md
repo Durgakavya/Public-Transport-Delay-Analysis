@@ -1,30 +1,16 @@
-\# Public Transport Delay \& Route Efficiency AnalysiS
-
-
+\# Public Transport Delay \& Route Efficiency Analysis
 
 \## 📌 Project Overview
 
-
-
 This project analyzes public transport trip data using SQL Server to understand route performance, passenger demand, and operational delays.
-
-
 
 The analysis focuses on identifying high-demand routes, delayed routes, peak passenger-demand periods, and routes that may require operational improvement.
 
-
-
 \---
-
-
 
 \## 🎯 Project Objective
 
-
-
 The main objectives of this project are:
-
-
 
 \- Analyze passenger demand across different routes
 
@@ -42,27 +28,15 @@ The main objectives of this project are:
 
 \- Generate business insights from transportation data
 
-
-
 \---
-
-
 
 \## 🗂️ Dataset
 
-
-
 The project contains two relational tables:
-
-
 
 \### 1. `routes`
 
-
-
 Stores information about public transport routes.
-
-
 
 | Column | Description |
 
@@ -80,15 +54,9 @@ Stores information about public transport routes.
 
 | `vehicle\_type` | Type of vehicle |
 
-
-
 \### 2. `trips`
 
-
-
 Stores individual trip and operational information.
-
-
 
 | Column | Description |
 
@@ -112,19 +80,11 @@ Stores individual trip and operational information.
 
 | `trip\_status` | Trip completion status |
 
-
-
 The dataset contains \*\*40 trips across 10 routes over 4 days\*\*.
-
-
 
 \---
 
-
-
 \## 🛠️ Tools \& Technologies
-
-
 
 \- SQL Server
 
@@ -132,19 +92,11 @@ The dataset contains \*\*40 trips across 10 routes over 4 days\*\*.
 
 \- GitHub
 
-
-
 \---
-
-
 
 \## 🧠 SQL Concepts Used
 
-
-
 This project demonstrates practical SQL concepts including:
-
-
 
 \- SELECT statements
 
@@ -174,19 +126,11 @@ This project demonstrates practical SQL concepts including:
 
 \- Conditional classification
 
-
-
 \---
-
-
 
 \## 🔍 Business Questions
 
-
-
 The project answers the following business questions:
-
-
 
 1\. Which routes have the highest passenger demand?
 
@@ -208,27 +152,15 @@ The project answers the following business questions:
 
 10\. Which routes require operational improvement?
 
-
-
 \---
-
-
 
 \## 📊 Key Analysis
 
-
-
 \### Passenger Demand
-
-
 
 Passenger demand is aggregated at route level to identify the busiest routes.
 
-
-
 The analysis shows that:
-
-
 
 \- \*\*Route 105\*\* has the highest passenger demand with \*\*883 passengers\*\*.
 
@@ -236,57 +168,31 @@ The analysis shows that:
 
 \- \*\*Route 106\*\* has the third-highest demand with \*\*756 passengers\*\*.
 
-
-
 \### Route Delays
-
-
 
 Average departure delay is calculated using the difference between scheduled and actual departure times.
 
-
-
 The analysis identifies \*\*Route 106\*\* and \*\*Route 109\*\* as important routes for delay investigation.
-
-
 
 \### High-Demand \& High-Delay Routes
 
-
-
 Routes with more than 500 passengers and an average delay above 10 minutes are considered high-priority routes.
 
-
-
 The analysis identifies:
-
-
 
 \- \*\*Route 106 — 756 passengers, 18-minute average delay\*\*
 
 \- \*\*Route 109 — 535 passengers, 15-minute average delay\*\*
 
-
-
 These routes may require additional operational attention because delays affect a relatively large number of passengers.
-
-
 
 \---
 
-
-
 \## 📈 Route Performance Classification
-
-
 
 Routes are classified using passenger demand and average delay.
 
-
-
 The classification includes:
-
-
 
 \- \*\*High Demand - Good Performance\*\*
 
@@ -296,23 +202,13 @@ The classification includes:
 
 \- \*\*Low Demand - Delayed\*\*
 
-
-
 This classification helps convert raw SQL results into practical business insights.
-
-
 
 \---
 
-
-
 \## 💡 Business Insights
 
-
-
 The analysis can help transport operators:
-
-
 
 \- Prioritize routes with frequent delays
 
@@ -328,15 +224,9 @@ The analysis can help transport operators:
 
 \- Monitor route-level operational performance
 
-
-
 \---
 
-
-
 \## 📁 Project Structure
-
-
 
 ```text
 
