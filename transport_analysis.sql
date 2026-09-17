@@ -31,10 +31,6 @@ PURPOSE: Analyze route performance, passenger demand,
 -- =========================================================
 
 CREATE DATABASE PublicTransportAnalysis;
-GO
-
-USE PublicTransportAnalysis;
-GO
 
 -- =========================================================
 -- STEP 4: CREATE ROUTES TABLE AND INSERT ROUTE DATA
@@ -49,7 +45,6 @@ CREATE TABLE routes
     distance_km DECIMAL(6,2),
     vehicle_type VARCHAR(30)
 );
-GO
 
 INSERT INTO routes
 (route_id, route_name, start_point, end_point, distance_km, vehicle_type)
@@ -64,7 +59,7 @@ VALUES
 (108, 'Route 108', 'Begumpet', 'Mehdipatnam', 11.90, 'Bus'),
 (109, 'Route 109', 'Kondapur', 'Uppal', 22.40, 'Bus'),
 (110, 'Route 110', 'Madhapur', 'LB Nagar', 20.10, 'Metro');
-GO
+
 
 -- =========================================================
 -- STEP 5: CREATE TRIPS TABLE
@@ -83,16 +78,12 @@ CREATE TABLE trips
     trip_status VARCHAR(20),
     FOREIGN KEY (route_id) REFERENCES routes(route_id)
 );
-GO
 
 -- =========================================================
 -- STEP 6: INSERT TRIP DATA
 -- =========================================================
 
-INSERT INTO trips
-(trip_id, route_id, trip_date, scheduled_departure, actual_departure,
- scheduled_arrival, actual_arrival, passenger_count, trip_status)
-VALUES
+INSERT INTO trips VALUES
 (5001, 101, '2026-09-01', '07:00:00', '07:05:00', '07:45:00', '07:52:00', 82, 'Completed'),
 (5002, 102, '2026-09-01', '07:30:00', '07:42:00', '08:30:00', '08:48:00', 115, 'Completed'),
 (5003, 103, '2026-09-01', '08:00:00', '08:03:00', '08:50:00', '08:55:00', 96, 'Completed'),
@@ -133,7 +124,6 @@ VALUES
 (5038, 108, '2026-09-04', '11:00:00', '11:01:00', '11:45:00', '11:48:00', 66, 'Completed'),
 (5039, 109, '2026-09-04', '12:00:00', '12:15:00', '13:10:00', '13:32:00', 128, 'Completed'),
 (5040, 110, '2026-09-04', '13:00:00', '13:04:00', '13:55:00', '14:06:00', 212, 'Completed');
-GO
 
 -- =========================================================
 -- STEP 7: VERIFY THE DATA
